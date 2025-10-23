@@ -1,21 +1,24 @@
+from suma import sumar
 from resta import restar
-
 def calculadora():
-    print("""
-    Opciones:
-    0 - Salir
-    2 - Resta
-    """)
-
+    print(""" 
+          Opciones:
+          0 - Salir
+          1 - Suma
+          2 - Resta
+""")
     while True:
-        opcion = int(input("Introduzca la opción: "))
+        opcion = int(input("Introduzca la opcion que quiera: "))
         if opcion == 0:
-            print("Saliendo...")
+            print("Saliendo de calculadora...")
             break
+        if opcion == 1:
+            a = int(input("Introduzca el primer numero: "))
+            b = int(input("Introduzca el segundo número: "))
+            print(f"El resultado de la suma de {a} + {b} es: {sumar(a, b)}")
         elif opcion == 2:
             a = int(input("Primer número: "))
             b = int(input("Segundo número: "))
             print(f"Resultado de la resta: {restar(a, b)}")
-
 if __name__ == "__main__":
     calculadora()
