@@ -1,11 +1,13 @@
 from suma import sumar
 from resta import restar
+from multiplicacion import multiplicar
 def calculadora():
     print(""" 
           Opciones:
           0 - Salir
           1 - Suma
           2 - Resta
+          3 - Multiplicación
 """)
     while True:
         opcion = int(input("Introduzca la opcion que quiera: "))
@@ -20,5 +22,9 @@ def calculadora():
             a = int(input("Primer número: "))
             b = int(input("Segundo número: "))
             print(f"Resultado de la resta: {restar(a, b)}")
+        elif opcion == 3:
+            a = int(input("Primer número: "))
+            b = int(input("Segundo número: "))
+            print(f"Resultado de la resta: {multiplicar(a, b)}")
 if __name__ == "__main__":
     calculadora()
