@@ -32,6 +32,8 @@ def calculadora():
         elif opcion == 4:
             a = int(input("Primer número: "))
             b = int(input("Segundo número: "))
+            if b == 0:
+                raise ValueError("No se puede dividir entre 0")
             print(f"Resultado de la división: {dividir(a, b)}")
 if __name__ == "__main__":
     calculadora()
